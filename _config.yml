@@ -1,0 +1,68 @@
+source:              .
+destination:         ./_site
+includes:            ./_includes
+
+# ------------------------------
+# Collections
+# ------------------------------
+
+collections_dir:     ./_collections
+collections:
+  projects:
+    permalink: /:collection/:name
+    output: true
+
+# ------------------------------
+# Basic Config
+# ------------------------------
+
+title: DataKind Bengaluru
+description: >- # this means to ignore newlines until "baseurl:"
+  Located in the "Silicon Valley of India," DataKind Bengaluru (DataKind BLR) launched in August 2014 to ensure the city is equally known for its leadership in the data-for-good movement.  Bengaluru is home to a large number of data professionals working at global technology firms, tech start-ups and research labs. There is also a robust local network of nonprofits working in areas ranging from rural development, literacy and health care to urban renewal and employment. Many of these organisations already have data professionals on staff and interest in using technology and data to further their work. DataKind BLR is in an ideal position to bring these groups together to not only make a local impact but serve as a shining example of data-for-good in India.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://DataKind-BLR.github.io" # the b ase hostname & protocol for your site, e.g. http://example.com
+email: bangalore@datakind.org
+twitter_username: datakindblr
+github_username:  DataKind-BLR
+
+# --------
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      # comments: false
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      # comments: false
+
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
